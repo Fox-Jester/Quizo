@@ -5,6 +5,8 @@ import SearchBar from "./SearchbBar.tsx";
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faX} from '@fortawesome/free-solid-svg-icons'
 
+import star from "./assets/star.svg"
+
 import QuizList from "./QuizList.tsx";
 
 
@@ -118,7 +120,7 @@ function QuizSelector(){
             <p className="quiz-preview-description">{quiz.description}</p>
             
             <div className="quiz-preview-footer">
-            <span className="star-container" onClick={(e) => handleStarClick(e, quiz.id)}><img src="/assets/star-regular.svg" alt="" /></span>
+            <span className="star-container" onClick={(e) => handleStarClick(e, quiz.id)}><img src={star} alt="" /></span>
             <p className="question-count-preview">{quiz.quizContent.length}: Questions</p>
             <button onClick={() => handleQuizBtn(quiz.id)} className="quiz-btn take-quiz-btn">Take Quiz</button>
 

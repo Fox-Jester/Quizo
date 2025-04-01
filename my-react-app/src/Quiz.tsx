@@ -1,6 +1,9 @@
 
 import QuizList from "./QuizList.tsx";
 import  { useState, useEffect, useRef } from "react";
+import arrow from "./assets/arrow-right.svg"
+import correctSound from "./assets/sounds/correct_sound.mp3"
+import wrongSound from "./assets/sounds/fail_sound.mp3"
 
 
 function Quiz(props: any) {
@@ -80,7 +83,7 @@ function Quiz(props: any) {
             selectedAnswer.parentElement?.classList.add("checked");
             
             if(audioBtn?.classList.contains("on")){
-                const audio = new Audio("./assets/sounds/correct_sound.mp3");
+                const audio = new Audio(wrongSound);
                 audio.play();
             }
         }
@@ -89,7 +92,7 @@ function Quiz(props: any) {
             selectedAnswer.parentElement!.parentElement!.classList.add("incorrect");
 
             if(audioBtn?.classList.contains("on")){
-                const audio = new Audio("/assets/sounds/fail_sound.mp3");
+                const audio = new Audio(correctSound);
                 audio.play();
 
             }
@@ -158,7 +161,7 @@ function Quiz(props: any) {
                 </>
             ) : null}
             
-            <button onClick={handleSubmit} className="submit-btn">Submit <img src="./assets/arrow-right.svg" /></button>
+            <button onClick={handleSubmit} className="submit-btn">Submit <img src={arrow} /></button>
             <p className="quiz-sheet-counter">{currentQuestion + 1}/{length}</p>
         </div>
     );
