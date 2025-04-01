@@ -83,7 +83,7 @@ function Quiz(props: any) {
             selectedAnswer.parentElement?.classList.add("checked");
             
             if(audioBtn?.classList.contains("on")){
-                const audio = new Audio(wrongSound);
+                const audio = new Audio(correctSound);
                 audio.play();
             }
         }
@@ -92,7 +92,7 @@ function Quiz(props: any) {
             selectedAnswer.parentElement!.parentElement!.classList.add("incorrect");
 
             if(audioBtn?.classList.contains("on")){
-                const audio = new Audio(correctSound);
+                const audio = new Audio(wrongSound);
                 audio.play();
 
             }
