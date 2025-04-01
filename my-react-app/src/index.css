@@ -91,15 +91,15 @@ h1{
 .audio-btn{
     font-size: 1.5rem;
     border: 2px solid hsl(0, 0%, 20%);
-    background-color: rgb(46, 245, 175);
     border-radius: 50vw;
     padding: 14px 10px;
     cursor: pointer;
+    background-color: #21f39f68;
 }
 
 .audio-btn:hover{
-    background-color: #21f39f68;
-
+    background-color: rgb(46, 245, 175);
+    
 }
 
 /* Header Media Query */

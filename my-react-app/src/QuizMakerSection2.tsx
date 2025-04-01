@@ -1,6 +1,6 @@
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faChevronRight} from '@fortawesome/free-solid-svg-icons'
-
+import arrow from "./assets/arrow-right.svg"
 import React, {useState} from "react";
 
 function QuizMakerSection2(){
@@ -113,7 +113,7 @@ function QuizMakerSection2(){
                             <textarea maxLength={90} className="quiz-maker-textarea" name="" id="quiz-maker-trivia-input"></textarea>
 
                             <p className="quiz-maker-question-count">Question 1</p>
-                            <button id="section2-submit-btn" className="submit-btn">Save Question<img src="../src/assets/arrow-right.svg" /></button>
+                            <button id="section2-submit-btn" className="submit-btn">Save Question<img src={arrow} /></button>
                             </div>
 
                             <button id='quiz-maker-finish-btn' className="submit-btn">Create</button>

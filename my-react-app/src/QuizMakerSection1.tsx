@@ -1,6 +1,6 @@
 
 
-
+import arrow from "./assets/arrow-right.svg"
 
 
 function QuizMakerSection1(){
@@ -25,7 +25,7 @@ function QuizMakerSection1(){
                         
                         
 
-                        <button id="section1-submit-btn" className="submit-btn">Next<img src="../src/assets/arrow-right.svg" /></button>
+                        <button id="section1-submit-btn" className="submit-btn">Next<img src={arrow} /></button>
                         </div>
 
                     )
