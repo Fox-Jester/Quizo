@@ -47,6 +47,8 @@ function QuizSelector(){
     
     function handleQuizBtn(id: number){
         setContent( <Quiz index={id} />);
+        const selectedLink = document.querySelector(".selected");
+        selectedLink?.classList.remove("selected");
     }
     
     function handleStarClick(e: React.MouseEvent<HTMLSpanElement>, id:number){

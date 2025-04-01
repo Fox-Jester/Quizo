@@ -28,6 +28,7 @@ function FrontPage(){
         window.scrollTo({top: 0});
 
         const headerLinks = document.querySelectorAll(".header-link");
+        
 
         headerLinks.forEach((link) => {
             link.addEventListener(("click"), () => {
